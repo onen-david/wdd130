@@ -6,12 +6,9 @@
 
 :root {
     --primary-color: #0B2D4D;
-    --secondary-color: #168AAD;
     --accent1-color: #F5B52E;
     --accent2-color: #F2F7FA;
-
     --heading-font: Arial, sans-serif;
-    --paragraph-font: Arial, sans-serif;
 }
 
 header,
