@@ -1,13 +1,21 @@
 :root {
-    --primary-color: darkblue;
+    --primary-color: steelblue;
     --secondary-color: #333;
     --primary-text-align: center;
     --primary-image-height: auto;
     --primary-border-thinckness: 1px;
+    --primary-background-color: #eee;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 h1 {
     color: var(--primary-color);
+    padding: .5rem;
 }
 
 nav {
@@ -22,38 +30,59 @@ nav a {
 }
 
 main {
-    max-width: 840px;
+    max-width: 640px;
 }
 
 main img {
     width: 150px;
     height: var(--primary-image-height);
     padding: 2px;
-    border: var(--primary-border-thinckness) solid black;
+    border: var(--primary-border-thinckness) solid var(--primary-background-color);
     box-shadow: 0 0 30px gray;
+    float: right;
+    padding: 0 0 1rem 1rem;
 }
 
 p {
+    margin: 1rem;
     padding: 0;
+    line-height: 1.6;
 }
 
 aside {
-    width: 20rem;
-    padding: 1rem;
-    margin: 1rem;
-    border: var(--primary-border-thinckness) solid rgb(0 0 0 / 0.2);
-    background-color: #eee;
-    color: var(--secondary-color);
+    width: 20em;
     text-align: var(--primary-text-align);
+    position: relative;
+}
+
+aside h2 {
+    position: absolute;
+    top: 25px;
+    left: 120px;
 }
 
 aside img {
     width: 200px;
     height: var(--primary-image-height);
+
 }
 
 footer {
     margin-top: 20px;
     border-top: var(--primary-border-thinckness) solid var(--secondary-color);
     text-align: var(--primary-text-align);
+}
+
+/* class selector */
+
+.box {
+    margin: 1rem;
+    padding: 1rem;
+    border: var(--primary-border-thinckness) solid rgba(0, 0, 0, .1);
+    color: #000;
+    background-color: var(--primary-background-color);
+}
+
+.indent {
+    padding-left: 2rem;
 }
