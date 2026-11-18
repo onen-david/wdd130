@@ -1,14 +1,23 @@
+:root {
+    --primary-color: #0B2D4D;
+    --accent1-color: #F5B52E;
+    --accent2-color: #F2F7FA;
+    --text-dark: #1A1A1A;
+    --text-light: #F2F7FA;
+    --heading-font: Arial, sans-serif;
+    --body-font: Georgia, serif;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --primary-color: #0B2D4D;
-    --accent1-color: #F5B52E;
-    --accent2-color: #F2F7FA;
-    --heading-font: Arial, sans-serif;
+body {
+    font-family: var(--body-font);
+    background-color: var(--accent2-color);
+    color: var(--text-dark);
 }
 
 header,
@@ -21,52 +30,41 @@ footer {
 h1,
 h2 {
     font-family: var(--heading-font);
-    color: var(--primary-color);
 }
 
 header {
-    display: flex;
-    background-color: var(--accent2-color);
-    color: var(--primary-color);
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 120px 1fr;
     align-items: center;
-    padding: 10px;
+    background-color: var(--primary-color);
+    padding: 16px 24px;
+    margin: 0 auto 0 auto;
 }
 
 header img {
-    width: 100px;
+    width: 80px;
     height: auto;
+    border-radius: 6px;
 }
 
-nav ul {
+.navigation {
     display: flex;
-    gap: 25px;
+    gap: 24px;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    justify-content: flex-end;
 }
 
 nav a {
     text-decoration: none;
+    color: var(--text-light);
+    font-family: var(--heading-font);
+    font-size: 16px;
+    padding: 6px 10px;
 }
 
-nav,
-p,
-section,
-article {
-    padding: 8px;
-    margin: 16px;
-}
-
-.socialmedia {
-    display: flex;
-    gap: 15px;
-    text-decoration: none;
-}
-
-.socialmedia img {
-    width: 32px;
-    height: 32px;
+nav a:hover {
+    background-color: var(--accent1-color);
+    color: var(--primary-color);
 }
 
 .hero {
@@ -84,33 +82,130 @@ h1 {
     top: 30px;
     width: 100%;
     background-color: var(--primary-color);
-    color: var(--accent2-color);
+    color: var(--text-light);
     text-align: center;
-    opacity: 0.8;
+    padding: 12px;
+    opacity: 0.85;
+    font-size: 28px;
 }
 
 .hero article {
     position: absolute;
-    bottom: 5px;
-    background-color: #F5B52E;
+    bottom: 40px;
+    left: 20px;
+    right: 20px;
+    background-color: var(--accent1-color);
+    color: var(--primary-color);
+    padding: 12px;
+    border-radius: 6px;
 }
 
 .hero article img {
     float: right;
     width: 120px;
+    height: auto;
+    margin-left: 12px;
+    border-radius: 8px;
+}
+
+.hero article p {
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 h2 {
     background-color: var(--primary-color);
-    color: #F2F7FA;
+    color: var(--text-light);
     text-align: center;
-    height: 50px;
-    padding: 10px;
+    padding: 12px;
+    font-size: 22px;
+}
+
+section {
+    margin: 24px 0;
+}
+
+.history {
+    display: grid;
+    grid-template-columns: 1fr 250px 1fr;
+    gap: 16px;
+    align-items: stretch;
+    padding: 16px;
+    background-color: white;
+}
+
+.history p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow: auto;
+}
+
+.history img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.adventure-grid {
+    display: flex;
+    gap: 10px;
+    padding: 16px;
+    background-color: white;
+}
+
+.adventure-grid figure {
+    flex: 1;
+    margin: 0;
+    text-align: center;
+}
+
+.adventure-grid img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+}
+
+.adventure-grid figcaption {
+    font-size: 13px;
+    padding: 6px 4px;
+    color: var(--primary-color);
+    font-family: var(--heading-font);
+    font-weight: bold;
 }
 
 footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 2px solid var(--accent1-color);
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-top: 4px solid var(--accent1-color);
+    padding: 16px 24px;
+    margin-top: 24px;
+}
+
+footer p {
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.socialmedia {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+}
+
+.socialmedia img {
+    width: 32px;
+    height: 32px;
+}
+
+.socialmedia img:hover {
+    opacity: 0.7;
 }
