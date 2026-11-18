@@ -2,6 +2,7 @@
     --primary-color: #0B2D4D;
     --accent1-color: #F5B52E;
     --accent2-color: #F2F7FA;
+    --white-color: #FFFFFF;
     --text-dark: #1A1A1A;
     --text-light: #F2F7FA;
     --heading-font: Arial, sans-serif;
@@ -131,7 +132,7 @@ section {
     gap: 16px;
     align-items: stretch;
     padding: 16px;
-    background-color: white;
+    background-color: var(--white-color);
 }
 
 .history p {
@@ -152,7 +153,7 @@ section {
     display: flex;
     gap: 10px;
     padding: 16px;
-    background-color: white;
+    background-color: var(--white-color);
 }
 
 .adventure-grid figure {
